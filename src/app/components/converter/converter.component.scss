@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    .card {
+        width: 800px;
+
+        &__form {
+
+            display: flex;
+            justify-content: space-around;
+            color: white;
+            align-items: center;
+
+            .swap_icon {
+                cursor: pointer;
+            }
+
+            @media (max-width:600px) {
+                flex-direction: column
+            }
+
+        }
+    }
+}

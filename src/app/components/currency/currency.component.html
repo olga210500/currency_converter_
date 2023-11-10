@@ -1,0 +1,12 @@
+<form>
+  <div class="currency">
+    <mat-form-field>
+      <mat-select [(value)]="currentCurrency" (selectionChange)="selectCurrencyType($event)">
+        <mat-option *ngFor="let item of currenciesList" value="{{item}}">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+       <input matInput appNumericInput (input)="onChangeAmount($event)" [(ngModel)]="currentAmount"  [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+  </div>
+</form>

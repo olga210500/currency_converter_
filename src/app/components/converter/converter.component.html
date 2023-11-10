@@ -1,0 +1,9 @@
+<div class="container">
+    <mat-card class="card">
+        <div class="card__form">
+            <app-currency [currenciesList]="currencies" [currentCurrency]="currentCurrency" [currentAmount]="currentAmount" (setCurrencyType)="convertCurrency($event,true)" (setAmount)="convertAmount($event,true)"></app-currency>
+            <mat-icon class="swap_icon" fontIcon="swap_horiz" (click)="swapCurrency(currentCurrency,convertToCurrency,currentAmount,convertedAmount)"></mat-icon>
+            <app-currency [currenciesList]="currencies" [currentCurrency]="convertToCurrency" [currentAmount]="convertedAmount" (setCurrencyType)="convertCurrency($event,false)" (setAmount)="convertAmount($event,false)"></app-currency>
+        </div>
+    </mat-card>
+</div>
