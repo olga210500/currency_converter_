@@ -73,5 +73,7 @@ export class ConverterComponent implements OnInit, OnDestroy {
     this.convertToCurrency=swapFrom;
     this.currentAmount =amountTo;
     this.convertedAmount=amountFrom;
+    this.convertCurrency(  this.currentCurrency, true);
+    this.convertAmount(this.currentAmount,true)
   }
 }
